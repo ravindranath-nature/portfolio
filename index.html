@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ravindra Nath Tripathi | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Ravindra Nath Tripathi | Research Portfolio</title>
   <style>
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
       background: #f1f3f5;
       color: #212529;
     }
 
     header {
-      background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+      background: linear-gradient(135deg, #007bff, #6610f2);
       color: white;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0;
     }
 
     .container {
       max-width: 960px;
       margin: auto;
-      padding: 2rem;
       background: white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      animation: fadeInUp 1.2s ease-out;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      margin-top: 0;
     }
 
     h2 {
@@ -58,13 +38,18 @@
       margin-top: 2rem;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    p, li {
+      line-height: 1.6;
     }
 
-    li {
-      margin-bottom: 1rem;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li::before {
+      content: "• ";
+      color: #007bff;
     }
 
     a {
@@ -80,28 +65,90 @@
 <body>
   <header>
     <h1>Dr. Ravindra Nath Tripathi</h1>
-    <p>Data-Driven Machine Learning | Ecological AI</p>
+    <p>Postdoctoral Researcher | Data-Driven Machine Learning | Ecological AI</p>
   </header>
 
   <div class="container">
     <section>
       <h2>Contact Information</h2>
-      <p>Email: <a href="mailto:ravindra1364@gmail.com">ravindra1364@gmail.com</a> | <a href="mailto:ravindra1364@wii.gov.in">ravindra1364@wii.gov.in</a></p>
-      <p>Phone: +91 9818801364 | +91 9550060706</p>
-      <p>Location: Dehradun, India</p>
+      <p>Email: <a href="mailto:ravindra1364@gmail.com">ravindra1364@gmail.com</a>, 
+                 <a href="mailto:ravindra1364@wii.gov.in">ravindra1364@wii.gov.in</a></p>
+      <p>Phone: <a href="tel:+919818801364">+91 9818801364</a>, <a href="tel:+919550060706">+91 9550060706</a></p>
+      <p>Location: House No. 27/C MDDA Apartment, ISBT, Dehradun, India</p>
       <p>ORCID: <a href="https://orcid.org/0000-0001-7299-8955" target="_blank">0000-0001-7299-8955</a></p>
     </section>
 
     <section>
-      <h2>Recent Publications</h2>
+      <h2>Professional Summary</h2>
+      <p>Innovative researcher with a Ph.D. in Computer Science Engineering and seven years of experience applying AI, deep learning, and remote sensing for ecological assessment and biodiversity monitoring. Proven expertise in scalable AI tools for wildlife conservation, habitat mapping, and real-time detection systems.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
       <ul>
-        <li><strong>2025:</strong> " the Conservation in action: Cost-effective UAVs and real-time detection of the globally threatened swamp deer (Rucervus duvaucelii)" — <a href="https://doi.org/10.1016/j.ecoinf.2024.102913" target="_blank">Ecological Informatics</a></li>
-        <li><strong>2025:</strong> "FreeFlow: A framework for server-driven Mobile apps" — <a href="https://doi.org/10.1016/j.sctalk.2025.100445" target="_blank">Science Talks</a></li>
-        <li><strong>2025:</strong> "Assessment of Eco-Environmental Vulnerability in the Chambal River Basin, India" — <a href="https://doi.org/10.1007/s00704-025-05417-y" target="_blank">Theor Appl Climatol</a></li>
-        <li><strong>2024:</strong> "Bird monitoring intelligence: Integrating Thermal UAV Imagery and deep learning tools" — <a href="https://ijisae.org/index.php/IJISAE/article/view/5595" target="_blank">IJISAE</a></li>
-        <li><strong>2024:</strong> "Optimizing Riparian Habitat Conservation: A Spatial Approach Using Aerial and Space Technologies" — <a href="https://doi.org/10.1109/JSTARS.2024.3454453" target="_blank">IEEE JSTARS</a></li>
-        <li><strong>2024:</strong> "UAV and Deep Learning: Detection of selected riparian species along the Ganga River" — <a href="https://doi.org/10.5194/isprs-archives-XLVIII-1-2024-637-2024" target="_blank">ISPRS Archives</a></li>
-        <li><strong>2024:</strong> "Feasibility study of UAV based ecological monitoring in Keibul Lamjao National Park" — <a href="https://doi.org/10.1016/j.measurement.2024.114411" target="_blank">Measurement</a></li>
+        <li>Ph.D. in Computer Science Engineering – Graphic Era University, Dehradun (2024)</li>
+        <li>M.Sc. in Geo-Informatics – Uttarakhand Technical University, Dehradun (2019)</li>
+        <li>B.Tech in Information Technology – Punjab Technical University, Jalandhar (2012)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Deep Learning: YOLO, RCNN, DETR, RT-DETR</li>
+        <li>Data Science: Python, R, Google Earth Engine, SQL, TensorFlow, PyTorch</li>
+        <li>GIS/RS: QGIS, ArcGIS, Erdas, eCognition</li>
+        <li>Monitoring Tools: UAV, IoT, Edge computing, LULC analysis, habitat modeling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Employment History</h2>
+      <ul>
+        <li><strong>Wildlife Institute of India</strong> (2021–Present): Principal Research Associate</li>
+        <li><strong>Wildlife Institute of India</strong> (2017–2021): Research Associate</li>
+        <li><strong>NIC, Delhi</strong> (2016–2017): Data Analyst</li>
+        <li><strong>Narora Atomic Power Station</strong> (2012–2016): Technical Assistant</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Research Areas</h2>
+      <ul>
+        <li>Hydrological assessment & ecological modeling</li>
+        <li>UAV and satellite-based remote sensing</li>
+        <li>Big data analytics for environment</li>
+        <li>Spatial analysis and biodiversity conservation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Awards & Certifications</h2>
+      <ul>
+        <li>ISPRS Grant (USD 3000) – Mid-Term Symposium, China</li>
+        <li>Best Paper Award – ICMTEA Conference</li>
+        <li>ESRI Story Map 1st Prize – Ganga Biodiversity Project</li>
+        <li>Microsoft Certified: Azure Data Fundamentals</li>
+        <li>Certified in Spatial Data Science, Remote Sensing, Deep Learning</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Selected Publications</h2>
+      <ul>
+        <li><strong>2025</strong>: "Conservation in Action..." – <em>Ecological Informatics</em> <a href="https://doi.org/10.1016/j.ecoinf.2024.102913" target="_blank">DOI</a></li>
+        <li><strong>2024</strong>: "Bird Monitoring Intelligence..." – <em>IJISAE</em> <a href="https://ijisae.org/index.php/IJISAE/article/view/5595" target="_blank">DOI</a></li>
+        <li><strong>2024</strong>: "Optimizing Riparian Habitat Conservation..." – <em>IEEE JSTARS</em> <a href="https://doi.org/10.1109/JSTARS.2024.3454453" target="_blank">DOI</a></li>
+        <li><strong>2025</strong>: "FreeFlow: A Framework..." – <em>Science Talks</em> <a href="https://doi.org/10.1016/j.sctalk.2025.100445" target="_blank">DOI</a></li>
+        <li><strong>2025</strong>: "Eco-Environmental Vulnerability in Chambal..." – <em>Theor Appl Climatol</em> <a href="https://doi.org/10.1007/s00704-025-05417-y" target="_blank">DOI</a></li>
+        <li><strong>2024</strong>: "Riparian Species Detection..." – <em>ISPRS Archives</em> <a href="https://doi.org/10.5194/isprs-archives-XLVIII-1-2024-637-2024" target="_blank">DOI</a></li>
+        <li><strong>2024</strong>: "Ecological Monitoring in Keibul Lamjao..." – <em>Measurement</em> <a href="https://doi.org/10.1016/j.measurement.2024.114411" target="_blank">DOI</a></li>
+        <li><strong>2024</strong>: "Swamp Deer Detection Using UAVs" – <em>Mendeley Data</em> <a href="https://10.17632/53nvjhh5pg" target="_blank">Link</a></li>
+        <li><strong>2023</strong>: "Thermal UAV System for Bird Detection" – <em>ICMTEA</em></li>
+        <li><strong>2022</strong>: "Habitat Assessment in Hastinapur" – <em>Ecological Informatics</em> <a href="https://10.1016/j.ecoinf.2022.101851" target="_blank">DOI</a></li>
+        <li><strong>2022</strong>: "Seasonal Water Spread Monitoring via GEE" – <em>ISPRS Archives</em> <a href="https://10.5194/isprs-archives-XLIII-B3-2022-1287-2022" target="_blank">DOI</a></li>
+        <li><strong>2018</strong>: "Biodiversity System for Ganga River" – <em>International Biodiversity Congress</em></li>
+        <li><strong>2018</strong>: "Monitoring Portal for Ganga Conservation" – <em>Indian Society of Geomatics</em></li>
       </ul>
     </section>
   </div>
