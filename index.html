@@ -1,116 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ravindra Nath Tripathi | Portfolio</title>
-  <style>
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f1f3f5;
-      color: #212529;
-    }
-
-    header {
-      background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
-      color: white;
-      padding: 4rem 1rem;
-      text-align: center;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-      background: white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      animation: fadeInUp 1.2s ease-out;
-    }
-
-    h2 {
-      color: #343a40;
-      border-bottom: 2px solid #dee2e6;
-      padding-bottom: 0.25rem;
-      margin-top: 2rem;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 1rem;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ravindra Nath Tripathi  </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c5530 0%, #3e7b3e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        .position {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            opacity: 0.85;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px;
+            border-right: 1px solid #e9ecef;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c5530;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3e7b3e;
+        }
+        
+        .sidebar .section-title {
+            font-size: 1.1rem;
+            color: #495057;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .experience-item, .education-item, .publication-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c5530;
+            margin-bottom: 4px;
+        }
+        
+        .organization {
+            font-weight: 500;
+            color: #3e7b3e;
+            margin-bottom: 4px;
+        }
+        
+        .date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .description {
+            color: #495057;
+            line-height: 1.6;
+        }
+        
+        .description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .description li {
+            margin-bottom: 4px;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            margin-bottom: 8px;
+            padding: 6px 12px;
+            background: rgba(60, 123, 62, 0.1);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border-left: 3px solid #3e7b3e;
+        }
+        
+        .contact-list {
+            list-style: none;
+        }
+        
+        .contact-list li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-list a {
+            color: #3e7b3e;
+            text-decoration: none;
+        }
+        
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .publication-item {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: #2c5530;
+            margin-bottom: 4px;
+        }
+        
+        .publication-details {
+            color: #495057;
+            margin-bottom: 6px;
+        }
+        
+        .publication-link {
+            color: #3e7b3e;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+        
+        .certifications-list {
+            list-style: none;
+        }
+        
+        .certifications-list li {
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            background: rgba(60, 123, 62, 0.05);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .research-projects {
+            background: rgba(60, 123, 62, 0.05);
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #3e7b3e;
+        }
+        
+        .project-item {
+            margin-bottom: 15px;
+        }
+        
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #2c5530;
+            margin-bottom: 4px;
+        }
+        
+        .project-link {
+            color: #3e7b3e;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .sidebar, .content {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c5530 !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Dr. Ravindra Nath Tripathi</h1>
-    <p>Data-Driven Machine Learning | Ecological AI</p>
-  </header>
-
-  <div class="container">
-    <section>
-      <h2>Contact Information</h2>
-      <p>Email: <a href="mailto:ravindra1364@gmail.com">ravindra1364@gmail.com</a> | <a href="mailto:ravindra1364@wii.gov.in">ravindra1364@wii.gov.in</a></p>
-      <p>Phone: +91 9818801364 | +91 9550060706</p>
-      <p>Location: Dehradun, India</p>
-      <p>ORCID: <a href="https://orcid.org/0000-0001-7299-8955" target="_blank">0000-0001-7299-8955</a></p>
-    </section>
-
-    <section>
-      
-<h2>Recent Publications</h2>
-     <ul>
-    <li><strong>2025</strong>: Tripathi, R. N., Agarwal, K., Tripathi, V., Badola, R., & Hussain, S. A. "Conservation in Action: Cost-effective UAVs and Real-Time Detection of the Globally Threatened Swamp Deer (Rucervus duvaucelii)", <em>Ecological Informatics</em>, 85, 102913. <a href="https://doi.org/10.1016/j.ecoinf.2024.102913" target="_blank">DOI</a></li>
-    <li><strong>2024</strong>: Tripathi, R. N., Ramachandran, A., Tripathi, V., Badola, R., & Hussain, S. A. "Bird Monitoring Intelligence: Integrating Thermal UAV Imagery and Deep Learning Tools", <em>IJISAE</em>. <a href="https://ijisae.org/index.php/IJISAE/article/view/5595" target="_blank">DOI</a></li>
-    <li><strong>2024</strong>: Tripathi, R. N., et al. "Optimizing Riparian Habitat Conservation: A Spatial Approach Using Aerial and Space Technologies", <em>IEEE JSTARS</em>. <a href="https://doi.org/10.1109/JSTARS.2024.3454453" target="_blank">DOI</a></li>
-    <li><strong>2025</strong>: Sharma, N., Tripathi, R. N., & Tripathi, V. "FreeFlow: A Framework for Server-Driven Mobile Apps", <em>Science Talks</em>. <a href="https://doi.org/10.1016/j.sctalk.2025.100445" target="_blank">DOI</a></li>
-    <li><strong>2025</strong>: Singh, L., Singh, A., & Tripathi, R. N. "Assessment of Eco-Environmental Vulnerability in the Chambal River Basin", <em>Theor Appl Climatol</em>. <a href="https://doi.org/10.1007/s00704-025-05417-y" target="_blank">DOI</a></li>
-    <li><strong>2024</strong>: Tripathi, R. N., et al. "UAV and Deep Learning: Detection of Selected Riparian Species along the Ganga River", <em>ISPRS Archives</em>. <a href="https://doi.org/10.5194/isprs-archives-XLVIII-1-2024-637-2024" target="_blank">DOI</a></li>
-    <li><strong>2024</strong>: Tripathi, R. N., Ghazi, M. G., Badola, R., & Hussain, S. A. "Feasibility Study of UAV Based Ecological Monitoring in Keibul Lamjao National Park", <em>Measurement</em>, 229, 114411. <a href="https://doi.org/10.1016/j.measurement.2024.114411" target="_blank">DOI</a></li>
-    <li><strong>2024</strong>: Tripathi, R. N., et al. "Deep Learning Technique for Swamp Deer Detection Using Cost-Effective UAVs", <em>Mendeley Data</em>. <a href="https://10.17632/53nvjhh5pg" target="_blank">Link</a></li>
-    <li><strong>2023</strong>: Tripathi, R. N., et al. "Thermal-based Unmanned Aerial System for Detection and Counting of Freshwater Birds", <em>ICMTEA</em>.</li>
-    <li><strong>2022</strong>: Tripathi, R. N., et al. "Spatio-Temporal Habitat Assessment in Hastinapur Wildlife Sanctuary", <em>Ecological Informatics</em>, 69, 101851. <a href="https://10.1016/j.ecoinf.2022.101851" target="_blank">DOI</a></li>
-    <li><strong>2022</strong>: Tripathi, R. N., et al. "Google Earth Engine-Based App to Monitor Seasonal Water Spread of Ganga", <em>ISPRS Archives</em>. <a href="https://10.5194/isprs-archives-XLIII-B3-2022-1287-2022" target="_blank">DOI</a></li>
-    <li><strong>2018</strong>: Tripathi, R. N., et al. "Web-Based Information System for Biodiversity of Ganga River", <em>International Biodiversity Congress</em>.</li>
-    <li><strong>2018</strong>: Tripathi, R. N., et al. "Web Portal for Monitoring Biodiversity Conservation of the Ganga", <em>Indian Society of Geomatics</em>.</li>
-  </ul>
-    </section>
-  </div>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">DR. RAVINDRA NATH TRIPATHI</h1>
+            <p class="title">AI-based Wildlife Monitoring Expert | Computer vision Expert | Spatial Ecologist</p>
+            <p class="position">Principal Project Associate, Wildlife Institute of India, Dehradun, India</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>✉</span>
+                    <span>ravindra1364@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>✉</span>
+                    <span>ravindra1364@wii.gov.in</span>
+                </div>
+               
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="section">
+                    <h2 class="section-title">Core Skills</h2>
+                    <ul class="skills-list">
+                        <li>UAV-based data collection and processing</li>
+                        <li>Real-time sensor and IoT data integration</li>
+                        <li>Spatial and habitat modeling</li>
+                        <li>Machine Learning & Computer Vision</li>
+                        <li>Cloud computing (AWS, GCP)</li>
+                        <li>Python, R, Google Earth Engine</li>
+                        <li>GIS tools (QGIS, ArcGIS, Erdas)</li>
+                        <li>Docker, Kubernetes, GitLab CI/CD</li>
+                        <li>Big data analytics</li>
+                        <li>Teaching & Mentoring</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Professional Links</h2>
+                    <ul class="contact-list">
+                        <li><a href="#" target="_blank">Research Gate Profile</a></li>
+                        <li><a href="#" target="_blank">ORCID Profile</a></li>
+                        <li><a href="#" target="_blank">LinkedIn Profile</a></li>
+                        <li><a href="https://github.com/ravindranath-nature" target="_blank">GitHub Profile</a></li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Current Research</h2>
+                    <div class="research-projects">
+                        <div class="project-item">
+                            <div class="project-title">Multi-Species Wildlife Detection Framework</div>
+                            <p style="font-size: 0.85rem; margin-bottom: 6px;">End-to-end deep learning application with integrated data processing and deployment</p>
+                            <a href="https://github.com/ravindranath-nature/rnt-wild-animal" class="project-link" target="_blank">View on GitHub</a>
+                        </div>
+                        
+                        <div class="project-item">
+                            <div class="project-title">Soil Modeling for Gangetic River System</div>
+                            <p style="font-size: 0.85rem; margin-bottom: 6px;">Google Earth Engine based soil analysis and erosion modeling</p>
+                            <a href="https://github.com/ravindranath-nature/gee-soil-erosion" class="project-link" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Key Certifications</h2>
+                    <ul class="certifications-list">
+                        <li>Spatial Data Science - YONSEI University, Seoul</li>
+                        <li>ISPRS Grant Recipient (USD 3000) - China Symposium</li>
+                        <li>Microsoft Azure Data Fundamentals</li>
+                        <li>Best Paper Award - ICMTEA Conference</li>
+                        <li>ESRI Story Map Competition - First Prize</li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <main class="content">
+                <div class="section">
+                    <h2 class="section-title">Career Summary</h2>
+                    <p class="description">
+                        Innovative researcher with a Ph.D. in Computer Science Engineering and over a decade of interdisciplinary experience at the nexus of AI, UAVs, and remote sensing for biodiversity monitoring and conservation planning. Demonstrated success in developing real-time data pipelines, Earth system modeling applications, and large-scale geospatial analytics. Proficient in Python, R, ML frameworks, and cloud-based tools, with a strong publication record and proven ability to translate scientific innovation into decision-making tools for stakeholders and society.
+                    </p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+                    
+                    <div class="experience-item">
+                        <h3 class="job-title">Principal Research Associate</h3>
+                        <p class="organization">Wildlife Institute of India, Dehradun, India</p>
+                        <p class="date">2021 - Present</p>
+                        <div class="description">
+                            <ul>
+                                <li>Planned and conducted some of India's first freshwater wildlife monitoring programs</li>
+                                <li>Implemented data fusion techniques combining UAV imagery with satellite remote sensing data</li>
+                                <li>Developed habitat quality models and threat dynamics analysis across the Ganges Basin</li>
+                                <li>Established expertise in wetlands, riparian ecosystems, forest and agricultural habitats through interdisciplinary research</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <h3 class="job-title">Research Associate</h3>
+                        <p class="organization">Wildlife Institute of India, Dehradun, India</p>
+                        <p class="date">2017 - 2021</p>
+                        <div class="description">
+                            <ul>
+                                <li>Contributed to management plans for Haiderpur wetland and Hastinapur Wildlife Sanctuary, Uttar Pradesh</li>
+                                <li>Generated comprehensive geospatial datasets including road networks, rail networks, rivers, settlements, and forest cover analysis</li>
+                                <li>Managed spatial and non-spatial database systems for conservation projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <h3 class="job-title">Data Analyst</h3>
+                        <p class="organization">National Informatics Center, Delhi, India</p>
+                        <p class="date">2016 - 2017</p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <h3 class="job-title">Technical Assistant</h3>
+                        <p class="organization">Narora Atomic Power Station, Bulandsahr, India</p>
+                        <p class="date">2012 - 2016</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-item">
+                        <h3 class="job-title">Ph.D., Computer Science Engineering</h3>
+                        <p class="organization">Graphic Era University, Dehradun, India</p>
+                        <p class="date">2025</p>
+                        <div class="description">
+                            <strong>Title:</strong> "Integrating Computer Vision and Unmanned Aerial System for Ecological Monitoring of Freshwater Habitat"<br>
+                            <strong>Supervisors:</strong> Dr. Vikas Tripathi & Dr. Syed Ainul Hussain
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3 class="job-title">M.S., Geo-Informatics</h3>
+                        <p class="organization">Uttarakhand Open University, Dehradun, India</p>
+                        <p class="date">2019</p>
+                        <div class="description">
+                            <strong>Major Project:</strong> "Visualisation and Characterisation of Macro faunal diversity of Ganga River using Geo-Portal"<br>
+                            <strong>Supervisor:</strong> Dr. Gautam Talukdar
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3 class="job-title">B.Tech., Information Technology</h3>
+                        <p class="organization">Punjab Technical University, Jalandhar, Punjab, India</p>
+                        <p class="date">2012</p>
+                        <div class="description">
+                            Developed foundational expertise in computer vision and artificial intelligence techniques.<br>
+                            <strong>Minor Project:</strong> "Web-based geoportal framework for visualizing and managing district data"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Selected Research Publications</h2>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Conservation in action: Cost-effective UAVs and real-time detection of the globally threatened swamp deer (Rucervus duvaucelii)</div>
+                        <div class="publication-details">R. N. Tripathi, K. Agarwal, V. Tripathi, R. Badola, & S. A. Hussain (2025). Ecological Informatics, 85, 102913. Impact Factor: 5.8, SCIE, Web of Science</div>
+                        <a href="https://doi.org/10.1016/j.ecoinf.2024.102913" class="publication-link" target="_blank">DOI: 10.1016/j.ecoinf.2024.102913</a>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Optimizing Riparian Habitat Conservation: A Spatial Approach Using Aerial and Space Technologies</div>
+                        <div class="publication-details">R. N. Tripathi, A. Ramachandran, V. Tripathi, R. Badola, and S. A. Hussain (2024). IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. Impact Factor: 4.7, SCIE, Web of Science</div>
+                        <a href="https://doi.org/10.1109/JSTARS.2024.3454453" class="publication-link" target="_blank">DOI: 10.1109/JSTARS.2024.3454453</a>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Assessment of Eco-Environmental Vulnerability, Sustainability, and Alignment with Sustainable Development Goals in the Chambal River Basin, India</div>
+                        <div class="publication-details">L. Singh, A. Singh, R. N. Tripathi (2025). Theoretical and Applied Climatology, 156, 184</div>
+                        <a href="https://doi.org/10.1007/s00704-025-05417-y" class="publication-link" target="_blank">DOI: 10.1007/s00704-025-05417-y</a>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">UAV and Deep Learning: Detection of selected riparian species along the Ganga River</div>
+                        <div class="publication-details">R. N. Tripathi, A. Ramachandran, V. Tripathi, R. Badola, S. A. Hussain, K. Agarwal (2024). The International Archives of Photogrammetry, Remote Sensing and Spatial Information</div>
+                        <a href="https://doi.org/10.5194/isprs-archives-XLVIII-1-2024-637-2024" class="publication-link" target="_blank">DOI: 10.5194/isprs-archives-XLVIII-1-2024-637-2024</a>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Feasibility study of UAV based ecological monitoring and habitat assessment of cervids in the floating meadows of Keibul Lamjao National Park in Manipur, India</div>
+                        <div class="publication-details">R. N. Tripathi, M. G. Ghazi, R. Badola, & S. A. Hussain (2024). Measurement, 229, 114411. Impact Factor: 5.2, SCIE, Web of Science</div>
+                        <a href="https://doi.org/10.1016/j.measurement.2024.114411" class="publication-link" target="_blank">DOI: 10.1016/j.measurement.2024.114411</a>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Spatio-temporal habitat assessment of the Gangetic floodplain in the Hastinapur Wildlife Sanctuary</div>
+                        <div class="publication-details">R. N. Tripathi, A. Ramachandran, V. Tripathi, R. Badola, and S. A. Hussain (2022). Ecological Informatics, 69, 101851. Impact Factor: 5.8, SCIE, Web of Science</div>
+                        <a href="https://doi.org/10.1016/j.ecoinf.2022.101851" class="publication-link" target="_blank">DOI: 10.1016/j.ecoinf.2022.101851</a>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Development of a Google Earth engine-based application to monitor the seasonal water spread area of river Ganga</div>
+                        <div class="publication-details">R. N. Tripathi, A. Ramachandran, V. Tripathi, R. Badola, and S. A. Hussain (2022). The International Archives of Photogrammetry, Remote Sensing and Spatial Information. Impact Factor: 0.90, Scopus</div>
+                        <a href="https://doi.org/10.5194/isprs-archives-XLIII-B3-2022-1287-2022" class="publication-link" target="_blank">DOI: 10.5194/isprs-archives-XLIII-B3-2022-1287-2022</a>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Technical/Research Reports</h2>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Annual Report. Biodiversity Conservation and Ganga Rejuvenation</div>
+                        <div class="publication-details">WII-GACMC (2024). Ganga Aqualife Conservation Monitoring Centre, Wildlife Institute of India, Dehradun, Uttarakhand, India. pp 56.</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Ganga data collector: An Android application for field data collection</div>
+                        <div class="publication-details">WII-GACMC (2021). Biodiversity Conservation and Ganga Rejuvenation. Ganga Aqualife Conservation Monitoring Centre, Wildlife Institute of India, Dehradun, Uttarakhand, India.</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Ganga River - State of Biodiversity at a Glance</div>
+                        <div class="publication-details">WII-GACMC (2018). Ganga Aqualife Conservation Monitoring Centre, Wildlife Institute of India, Dehradun, Uttarakhand, India. ISBN: 81-85496-34-X.</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Glimpses of Ganga, Threatened Aqualife of Ganga River, Part-II</div>
+                        <div class="publication-details">WII-GACMC (2018). Ganga Aqualife Conservation Monitoring Centre, Wildlife Institute of India, Dehradun, Uttarakhand, India. pp 64. ISBN: 81-85496-36-6.</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Biodiversity profile of Ganga River</div>
+                        <div class="publication-details">WII-GACMC (2017). Ganga Aqualife Conservation Monitoring Centre, Wildlife Institute of India, Dehradun, Uttarakhand, India. pp 67. ISBN: 81-85496-35-8.</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Glimpses of Ganga: Threatened Aqualife of Ganga River, Part I</div>
+                        <div class="publication-details">WII-GACMC (2017). Ganga Aqualife Conservation Monitoring Centre, Wildlife Institute of India, Dehradun, Uttarakhand, India. pp 61. ISBN: 81-85496-35-9.</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Training and Certifications</h2>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Spatial Data Science</div>
+                        <div class="publication-details">YONSEI University, Seoul, Korea (Online) - December 2020</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Drone Data Acquisition and Analysis</div>
+                        <div class="publication-details">North East Space Application Centre, Shillong, Meghalaya, India - August 2019</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Advanced Remote Sensing Certificate Courses (8 Courses)</div>
+                        <div class="publication-details">Indian Institute of Remote Sensing, Dehradun, India (Online) - Digital Image Processing, Geosciences, Satellite Image Analysis, Photogrammetry, Water Resources, Big Data Analytics, SAR RS Technologies, RS-based Forest and Ecosystem Studies</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">Specialized Online Certifications</div>
+                        <div class="publication-details">Coursera - Computer Vision, Deep Learning Techniques, Google Earth Engine, R Programming in Environmental Data</div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-title">ISPRS Grant Recipient</div>
+                        <div class="publication-details">International Society for Photogrammetry and Remote Sensing Grant (USD 3,000) to attend Mid-Term Symposium Technical Commission, Changsha, China</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
